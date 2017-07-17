@@ -672,7 +672,7 @@ int callCouncil_room(struct gameState *state, int currentPlayer, int handPos){
     drawCard(currentPlayer, state);
   }
   //+1 buy
-  //state->numBuys++;;
+  //state->numBuys++;
   //each other player draws a card
   for (i = 0; i < state->numPlayers; i++){
     if (i != currentPlayer){
@@ -689,7 +689,7 @@ int callSmithy(struct gameState *state, int currentPlayer, int handPos){
   for (i = 0; i < 3; i++) {
     drawCard(currentPlayer, state);
   }
-  discardCard(handPos, currentPlayer, state, 1);
+  discardCard(handPos, currentPlayer, state, 0);
   return 0;
 }
 
