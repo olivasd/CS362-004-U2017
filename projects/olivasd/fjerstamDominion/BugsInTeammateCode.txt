@@ -1,0 +1,5 @@
+Bug Report for Fjerstam's Dominion
+
+Testing Village card revealed a bug were the number of actions always returns 2 rather than what is expected. The bug appears to be within the villageEffect function on line 1217. The function is to add 2 to numActions, but sets it to 2 instead.
+
+Testing Smithy card revealed a bug were the number of cards in the hand count is always one less than expected and there is always one more card in the deck count than expected. This bug appears to be within the smithyEffect function on line 1175. The for loop appears to have the index integer starting at 1 rather than 0, which means the loop is iterating one less time than it is suppose to. 
